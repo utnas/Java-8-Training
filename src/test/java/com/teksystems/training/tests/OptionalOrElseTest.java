@@ -5,7 +5,7 @@ import org.junit.Test;
 
 import java.util.Optional;
 
-import static com.teksystems.training.tests.helper.ItemHelper.hasProperties;
+import static com.teksystems.training.tests.helper.ItemMatcher.hasProperties;
 import static org.junit.Assert.assertThat;
 
 public class OptionalOrElseTest {

@@ -5,12 +5,12 @@ import org.hamcrest.BaseMatcher;
 import org.hamcrest.Description;
 import org.hamcrest.Matcher;
 
-public class ItemHelper {
+public class ItemMatcher {
 
     public static Matcher<Item> hasProperties(final String name, final double price) {
         return new BaseMatcher<Item>() {
             @Override
-            public boolean matches(Object input) {
+            public boolean matches(final Object input) {
                 Item item = (Item) input;
                 return item.getName().equals(name) && item.getBasePrice() == price;
             }
