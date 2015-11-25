@@ -1,4 +1,4 @@
-package com.teksystems.training.tests;
+package com.teksystems.training.tests._1_Empty;
 
 import org.junit.Test;
 

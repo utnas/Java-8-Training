@@ -1,5 +1,5 @@
 
-package com.teksystems.training.tests;
+package com.teksystems.training.tests._6_OrElseThrow;
 
 import org.junit.Test;
 

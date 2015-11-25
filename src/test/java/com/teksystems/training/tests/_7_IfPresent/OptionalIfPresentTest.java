@@ -1,4 +1,4 @@
-package com.teksystems.training.tests;
+package com.teksystems.training.tests._7_IfPresent;
 
 import com.teksystems.training.business.Item;
 import org.junit.Test;
