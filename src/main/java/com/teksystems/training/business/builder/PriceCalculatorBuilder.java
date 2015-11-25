@@ -13,37 +13,20 @@ public class PriceCalculatorBuilder {
 
     public PriceCalculatorBuilder build(final Item item, final Double tax) throws Throwable {
         /**
-         * If the argument item is null throw a new Null Pointer Exception else return the item.
-         * */
-        final Item localItem = ofNullable(item).orElseThrow(itemNullPointerException());
+         * If the argument item is null throw a new NullPointerException with specific message else the item can be used in priceCalculator.
+         */
 
         /**
-         * If the argument tax is less than zero, return 1.0 else return the value of tax.
-         * */
-        final Double localTax = ofNullable(tax).map(zeroToOne()).get();
+         * If the argument tax is less than zero, return 1.0 else the value of tax cal be used in priceCalculator.
+         */
 
-        priceCalculator = new PriceCalculator(localItem, localTax);
+
+        //priceCalculator = new PriceCalculator(localItem, localTax);
 
         return this;
     }
 
     public PriceCalculator getPriceCalculator() {
         return priceCalculator;
-    }
-
-    private Function<Double, Double> zeroToOne() {
-        return new Function<Double, Double>() {
-            public Double apply(Double aDouble) {
-                return aDouble == 0 ? Double.valueOf(1.0) : aDouble;
-            }
-        };
-    }
-
-    private Supplier<Throwable> itemNullPointerException() {
-        return new Supplier<Throwable>() {
-            public Throwable get() {
-                return new NullPointerException("Value was null");
-            }
-        };
     }
 }
