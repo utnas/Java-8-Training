@@ -4,7 +4,6 @@ import com.teksystems.training.business.Item;
 import com.teksystems.training.business.PriceCalculator;
 import com.teksystems.training.business.builder.PriceCalculatorBuilder;
 import org.junit.Test;
-import org.mockito.Mockito;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;

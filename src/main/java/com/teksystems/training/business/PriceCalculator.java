@@ -15,4 +15,12 @@ public class PriceCalculator implements ICalculator {
         final double basePrice = this.item.getBasePrice();
         return Math.floor(basePrice * this.tax + (basePrice * 100)) / 100;
     }
+
+    public Item getItem() {
+        return item;
+    }
+
+    public Double getTax() {
+        return tax;
+    }
 }
