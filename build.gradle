@@ -1,0 +1,51 @@
+repositories() {
+    mavenCentral()
+
+    maven { url 'https://oss.sonatype.org/content/repositories/snapshots' }
+    maven { url "http://clojars.org/repo" }
+    maven { url 'http://repo.spring.io/snapshot' }
+    maven { url 'https://repository.jboss.org/nexus/content/repositories/releases' }
+    maven { url 'https://oss.sonatype.org/content/repositories/releases' }
+    maven { url 'https://oss.sonatype.org/content/repositories/snapshots' }
+    maven { url 'http://mvnrepository.com/' }
+}
+
+apply plugin: 'idea'
+apply plugin: 'eclipse'
+apply plugin: 'java'
+apply plugin: 'groovy'
+
+dependencies {
+    compile group: 'org.projectlombok', name: 'lombok', version: lombok_version
+
+    compile('com.google.guava:guava:18.0')
+
+    compile group: 'commons-lang', name: 'commons-lang', version: commons_lang_version
+    compile group: 'commons-io', name: 'commons-io', version: commons_io_version
+    compile group: 'joda-time', name: 'joda-time', version: joda_time_version
+
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: spring_boot_version
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-actuator', version: spring_boot_version
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa', version: spring_boot_version
+
+    compile group: 'org.codehaus.groovy', name: 'groovy-all', version: groovy_all_version
+    compile group: 'com.h2database', name: 'h2', version: h2_database_version
+
+    testCompile group: 'junit', name: 'junit', version: junit_version
+    testCompile group: 'org.spockframework', name: 'spock-spring', version: spock_version
+    testCompile group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: spring_boot_version
+    testCompile("org.spockframework:spock-core:$spock_version") {
+        exclude module: 'groovy-all'
+    }
+}
+
+sourceSets {
+    integration {
+        groovy.srcDir file('src/integration/groovy')
+        resources.srcDir file('src/integration/resources')
+    }
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = gradle_version
+}
