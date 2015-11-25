@@ -1,7 +1,6 @@
 package com.teksystems.training.tests._3_OfNullable;
 
 import org.junit.Test;
-import org.mockito.BDDMockito;
 
 import java.util.Optional;
 
