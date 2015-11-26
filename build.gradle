@@ -1,12 +1,5 @@
 repositories() {
     mavenCentral()
-
-    maven { url 'https://oss.sonatype.org/content/repositories/snapshots' }
-    maven { url "http://clojars.org/repo" }
-    maven { url 'http://repo.spring.io/snapshot' }
-    maven { url 'https://repository.jboss.org/nexus/content/repositories/releases' }
-    maven { url 'https://oss.sonatype.org/content/repositories/releases' }
-    maven { url 'https://oss.sonatype.org/content/repositories/snapshots' }
     maven { url 'http://mvnrepository.com/' }
 }
 
