@@ -14,7 +14,7 @@ public class ItemMatcher {
                 return item.getName().equals(name) && item.getBasePrice() == price;
             }
 
-            public void describeTo(Description description) {
+            public void describeTo(final Description description) {
                 description.appendText(name + " or " + price + " does not match");
             }
         };
