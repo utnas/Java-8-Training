@@ -1,4 +1,4 @@
-package com.teksystems.training.tests._9_Map;
+package com.teksystems.training._9_Map;
 
 import com.teksystems.training.business.Item;
 import com.teksystems.training.business.PriceCalculator;

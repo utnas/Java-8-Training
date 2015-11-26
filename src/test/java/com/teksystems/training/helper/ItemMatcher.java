@@ -1,4 +1,4 @@
-package com.teksystems.training.tests.helper;
+package com.teksystems.training.helper;
 
 import com.teksystems.training.business.Item;
 import org.hamcrest.BaseMatcher;

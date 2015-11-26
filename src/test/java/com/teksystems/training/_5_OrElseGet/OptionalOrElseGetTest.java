@@ -1,4 +1,4 @@
-package com.teksystems.training.tests._5_OrElseGet;
+package com.teksystems.training._5_OrElseGet;
 
 import com.teksystems.training.business.Item;
 import org.junit.Test;
@@ -6,7 +6,7 @@ import org.junit.Test;
 import java.util.Optional;
 import java.util.function.Supplier;
 
-import static com.teksystems.training.tests.helper.ItemMatcher.hasProperties;
+import static com.teksystems.training.helper.ItemMatcher.hasProperties;
 import static org.junit.Assert.assertThat;
 
 public class OptionalOrElseGetTest {

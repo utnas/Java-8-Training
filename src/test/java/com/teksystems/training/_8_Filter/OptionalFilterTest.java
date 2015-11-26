@@ -1,4 +1,4 @@
-package com.teksystems.training.tests._8_Filter;
+package com.teksystems.training._8_Filter;
 
 import com.teksystems.training.business.Item;
 import com.teksystems.training.business.ItemLine;

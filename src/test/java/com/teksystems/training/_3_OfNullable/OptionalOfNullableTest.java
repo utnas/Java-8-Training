@@ -1,4 +1,4 @@
-package com.teksystems.training.tests._3_OfNullable;
+package com.teksystems.training._3_OfNullable;
 
 import org.junit.Test;
 

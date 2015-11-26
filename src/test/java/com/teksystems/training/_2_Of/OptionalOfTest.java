@@ -1,4 +1,4 @@
-package com.teksystems.training.tests._2_Of;
+package com.teksystems.training._2_Of;
 
 import org.junit.Test;
 
