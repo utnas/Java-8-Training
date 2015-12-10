@@ -18,7 +18,6 @@ public class OptionalOrElseGetTest {
 
         //When
         Item item = emptyOptional.orElseGet(new Supplier<Item>() {
-            @Override
             public Item get() {
                 return new Item("Book", 12.50);
             }
@@ -35,7 +34,6 @@ public class OptionalOrElseGetTest {
 
         //When
         Item item = emptyOptional.orElseGet(new Supplier<Item>() {
-            @Override
             public Item get() {
                 return new Item("Book", 12.50);
             }
