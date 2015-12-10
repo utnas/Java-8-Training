@@ -24,7 +24,7 @@ public class OptionalOrElseGetTest {
         });
 
         //Then
-        assertThat(item, hasProperties("Book", 12.50));
+        assertThat(item, hasProperties("", 0.0));
     }
 
     @Test
@@ -40,6 +40,6 @@ public class OptionalOrElseGetTest {
         });
 
         //Then
-        assertThat(item, hasProperties("Bare of Chocolate", 5.99));
+        assertThat(item, hasProperties("Book", 12.50));
     }
 }

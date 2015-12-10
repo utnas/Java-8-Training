@@ -14,23 +14,23 @@ import static org.junit.Assert.fail;
 public final class OptionalOrElseThrowTest {
 
     @Test(expected = NullPointerException.class)
-    public void itShouldThrowExceptionIfGetEmptyOptional() throws Throwable {
+    public void itShouldThrowNullPointerExceptionIfGetEmptyOptional() throws Throwable {
         // Given
         Optional emptyOptional = Optional.empty();
 
         //When, Then
         Object result = emptyOptional.orElseThrow(new Supplier() {
             public Object get() {
-                return new NullPointerException();
+                return new Exception();
             }
         });
         fail("Some thing went wrong, it should throw NullPointerException");
     }
 
     @Test
-    public void itShouldNotThrowExceptionWhenNotNull() throws Throwable {
+    public void itShouldNotThrowNullPointerExceptionWhenNotNull() throws Throwable {
         //Given
-        Optional myOptionalValue = Optional.of("My Value");
+        Optional myOptionalValue = Optional.of(null);
 
         //When
         String value = (String) myOptionalValue.orElseThrow(new Supplier() {

@@ -16,6 +16,6 @@ public class OptionalEmptyTest {
         Optional emptyOptional = Optional.empty();
 
         //Then
-        assertThat(emptyOptional.isPresent(), is(false));
+        assertThat(emptyOptional.isPresent(), is(true));
     }
 }

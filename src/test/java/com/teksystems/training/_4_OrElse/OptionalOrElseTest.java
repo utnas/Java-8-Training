@@ -11,7 +11,7 @@ import static org.junit.Assert.assertThat;
 public class OptionalOrElseTest {
 
     @Test
-    public void itShouldReturnDefaultValueFromEmptyOptional() {
+    public void itShouldReturnDefaultValueIfEmptyOptional() {
         //Given
         Optional<Item> emptyOptional = Optional.empty();
 
@@ -19,11 +19,11 @@ public class OptionalOrElseTest {
         Item defaultItem = emptyOptional.orElse(new Item("Book", 12.50));
 
         //Then
-        assertThat(defaultItem, ItemMatcher.hasProperties("Book", 12.50));
+        assertThat(defaultItem, ItemMatcher.hasProperties("Book", 1.50));
     }
 
     @Test
-    public void itShouldReturnOptionalValueFromAnNoneEmptyOptional() {
+    public void itShouldReturnOptionalValueIfNoneEmptyOptional() {
         //Given
         Optional<Item> emptyOptional = Optional.of(new Item("Bare of Chocolate", 5.99));
 
@@ -31,6 +31,6 @@ public class OptionalOrElseTest {
         Item item = emptyOptional.orElse(new Item("Book", 12.50));
 
         //Then
-        assertThat(item, ItemMatcher.hasProperties("Bare of Chocolate", 5.99));
+        assertThat(item, ItemMatcher.hasProperties("Book", 12.50));
     }
 }

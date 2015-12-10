@@ -16,7 +16,7 @@ public class OptionalOfNullableTest {
         Object nullable = null;
 
         // Then
-        assertThat(Optional.ofNullable(nullable).isPresent(), is(false));
+        assertThat(Optional.ofNullable(nullable).isPresent(), is(true));
     }
 
     @Test
@@ -25,6 +25,6 @@ public class OptionalOfNullableTest {
         Optional<String> name = Optional.ofNullable("My mane is");
 
         //Then
-        assertThat(name.isPresent(), is(true));
+        assertThat(name.isPresent(), is(false));
     }
 }
