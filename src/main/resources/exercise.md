@@ -67,6 +67,7 @@ If the argument tax is less than zero, the value of tax should be transformed to
 ```
 
     final Double localTax = ofNullable(tax).map(zeroToOne()).get();
+    
     // Helper
      private Function<Double, Double> zeroToOne() {
         return new Function<Double, Double>() {
