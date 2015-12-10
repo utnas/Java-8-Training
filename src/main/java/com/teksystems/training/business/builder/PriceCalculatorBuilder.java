@@ -3,6 +3,12 @@ package com.teksystems.training.business.builder;
 import com.teksystems.training.business.Item;
 import com.teksystems.training.business.PriceCalculator;
 
+import java.util.function.Function;
+import java.util.function.Supplier;
+
+import static java.lang.Double.valueOf;
+import static java.util.Optional.ofNullable;
+
 public class PriceCalculatorBuilder {
     private PriceCalculator priceCalculator;
 
@@ -10,13 +16,13 @@ public class PriceCalculatorBuilder {
         final Item localItem = null;
         final Double localTax = 0.0;
         /**
-         * If the argument item is null throw a new NullPointerException with specific message else the item can be used in priceCalculator.
+         * Case 1 - If the argument item is null throw a new NullPointerException with specific message otherwise the item should be used in priceCalculator.
          */
 
         // Your code here
 
         /**
-         * If the argument tax is less than zero, return 1.0 else the value of tax cal be used in priceCalculator.
+         * Case 2 - If the argument tax is less than zero, the value of tax should be transformed to 1.0 otherwise the value of tax will be used in priceCalculator.
          */
 
         // Your code here
