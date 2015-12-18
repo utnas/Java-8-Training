@@ -11,7 +11,7 @@ public class OptionalOfNullableTest {
 
     // OF NULLABLE
     @Test
-    public void itShouldReturnFalseWhenOfNullableOfNull() {
+    public void itShouldReturnFalseIfOptionaOfNullableOfNull() {
         // Given, When
         Object nullable = null;
 
@@ -20,7 +20,7 @@ public class OptionalOfNullableTest {
     }
 
     @Test
-    public void itShouldReturnTrueOfNullableNotNull() {
+    public void itShouldReturnTrueIfOptionalOfNullableOfNotNull() {
         //Given, When
         Optional<String> name = Optional.ofNullable("My mane is");
 

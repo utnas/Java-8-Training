@@ -26,9 +26,9 @@ public class OptionalFilterTest {
         );
 
         //When
-        Collection<Item> lessThatTEN = itemLine.filterByPriceLessThan(10.0);
+        Collection<Item> lessThanTEN = itemLine.filterByPriceLessThan(10.0);
 
         //Then
-        assertThat(lessThatTEN.size(), is(2));
+        assertThat(lessThanTEN.size(), is(2));
     }
 }

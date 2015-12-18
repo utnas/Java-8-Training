@@ -20,7 +20,7 @@ public class OptionalOfTest {
     }
 
     @Test
-    public void itShouldReturnTrueOfNotNull() {
+    public void itShouldReturnTrueIfOptionalOfNotNull() {
         //Given, When
         Optional<String> name = Optional.of("My mane is");
 

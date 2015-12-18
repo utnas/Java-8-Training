@@ -11,7 +11,7 @@ public class ItemMatcher {
         return new BaseMatcher<Item>() {
             public boolean matches(final Object input) {
                 Item item = (Item) input;
-                return item.getName().equals(name) && item.getBasePrice() == price;
+                return name.equals(item.getName()) && price == item.getBasePrice();
             }
 
             public void describeTo(final Description description) {
