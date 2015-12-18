@@ -2,15 +2,13 @@ package com.teksystems.training.business;
 
 import java.util.Collection;
 import java.util.List;
-import java.util.Optional;
-import java.util.function.Consumer;
-import java.util.function.Predicate;
 
 import static com.google.common.collect.Lists.newArrayList;
+import static java.util.Collections.unmodifiableCollection;
 
 public class ItemLine {
 
-    private List<Item> items = newArrayList();
+    private final List<Item> items = newArrayList();
 
     public boolean addItems(final Collection<Item> items) {
         return this.items.addAll(items);
@@ -24,6 +22,6 @@ public class ItemLine {
             // Code here
         }
 
-        return filteredItemList;
+        return unmodifiableCollection(filteredItemList);
     }
 }

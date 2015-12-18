@@ -10,7 +10,6 @@ public class PriceCalculator implements ICalculator {
         this.tax = tax;
     }
 
-    @Override
     public Double calculatePrice() {
         final double basePrice = this.item.getBasePrice();
         return Math.floor(basePrice * this.tax + (basePrice * 100)) / 100;

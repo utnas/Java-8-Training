@@ -12,18 +12,18 @@ Return only the item with price less than the provided value
                 .ifPresent(addItemTo(filteredItemList));
     }
     
-    private Consumer<Item> addItemTo(final Collection<Item> items) {
-        return new Consumer<Item>() {
-            public void accept(final Item item) {
-                items.add(item);
-            }
-        };
-    }
-
     private Predicate<Item> ifIsGreaterThan(final double value) {
         return new Predicate<Item>() {
             public boolean test(final Item item) {
                 return value >= item.getBasePrice();
+            }
+        };
+    }
+    
+    private Consumer<Item> addItemTo(final Collection<Item> items) {
+        return new Consumer<Item>() {
+            public void accept(final Item item) {
+                items.add(item);
             }
         };
     }
@@ -69,11 +69,11 @@ If the argument tax is less than zero, the value of tax should be transformed to
     final Double localTax = ofNullable(tax).map(zeroToOne()).get();
     
     // Helper
-     private Function<Double, Double> zeroToOne() {
+    private Function<Double, Double> zeroToOne() {
         return new Function<Double, Double>() {
             public Double apply(Double aDouble) {
                 return aDouble == 0 ? Double.valueOf(1.0) : aDouble;
             }
         };
-     }
+    }
 ```
