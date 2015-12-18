@@ -17,7 +17,8 @@ public class ItemLine {
     public Collection<Item> filterByPriceLessThan(final double value) {
         final Collection<Item> filteredItemList = newArrayList();
 
-        // Implement the filter regarding the value
+        // Implement the filter regarding the value,
+        // Return only the item with price less than the provided value
         for (final Item item : items) {
             // Code here
         }

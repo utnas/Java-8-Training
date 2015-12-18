@@ -15,14 +15,23 @@ public class PriceCalculatorBuilder {
     public PriceCalculatorBuilder build(final Item item, final Double tax) throws Throwable {
         final Item localItem = null;
         final Double localTax = 0.0;
+
         /**
-         * Case 1 - If the argument item is null throw a new NullPointerException with specific message otherwise the item should be used in priceCalculator.
+         * Case 1
+         * ------
+         *
+         * If item is null throw a new NullPointerException with specific message
+         * otherwise the item should be used in priceCalculator.
          */
 
         // Your code here
 
         /**
-         * Case 2 - If the argument tax is less than zero, the value of tax should be transformed to 1.0 otherwise the value of tax will be used in priceCalculator.
+         * Case 2
+         * ------
+         *
+         * If tax is less than zero, the value of tax should be transformed to 1.0
+         * otherwise the value of tax will be used in priceCalculator.
          */
 
         // Your code here
