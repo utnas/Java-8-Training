@@ -71,8 +71,8 @@ If the argument tax is less than zero, the value of tax should be transformed to
     // Helper
     private Function<Double, Double> zeroToOne() {
         return new Function<Double, Double>() {
-            public Double apply(Double aDouble) {
-                return aDouble == 0 ? Double.valueOf(1.0) : aDouble;
+            public Double apply(Double input) {
+                return 0 == input ? Double.valueOf(1.0) : input;
             }
         };
     }
