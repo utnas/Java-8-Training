@@ -11,7 +11,7 @@ public class OptionalOfNullableTest {
 
     // OF NULLABLE
     @Test
-    public void itShouldReturnFalseIfOptionaOfNullableOfNull() {
+    public void itShouldReturnFalseIfOptionalOfNullableOfNull() {
         // Given, When
         Object nullable = null;
 
