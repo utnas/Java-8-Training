@@ -4,7 +4,7 @@ public class Item {
 
     private final String name;
     private final double basePrice;
-    private volatile boolean imported;
+    private boolean imported;
 
     public Item(final String name, final double price) {
         this.name = name;
